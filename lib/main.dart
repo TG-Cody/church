@@ -1,4 +1,4 @@
-import 'package:church/screens/navigation/navigation_screen.dart';
+import 'package:church/screens/login/login.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Color(0xff081727),
         scaffoldBackgroundColor: Color(0xff081727),
       ),
-      home: NavigationScreen(),
+      home: LoginScreen(),
     );
   }
 }
