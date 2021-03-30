@@ -1,5 +1,6 @@
 // ignore: unused_import
 import 'package:church/css/css.dart';
+import 'package:church/css/logo.dart';
 import 'package:church/screens/login/login_components/bg_comp.dart';
 import 'package:church/screens/login/login_components/container_comp.dart';
 import 'package:church/screens/login/login_components/login_components.dart';
@@ -22,13 +23,7 @@ class _LoginScreenState extends State<LoginScreen> {
               //mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(32, 30, 0, 58),
-                  child: Image.asset(
-                    "images/logo.png",
-                    alignment: Alignment.topLeft,
-                  ),
-                ),
+                Logo(),
                 LoginComponents(),
                 SizedBox(
                   height: 20,

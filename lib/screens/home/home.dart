@@ -1,5 +1,8 @@
 import 'package:church/css/css.dart';
+import 'package:church/css/logo.dart';
+import 'package:church/screens/home/home_components/header_container.dart';
 import 'package:church/screens/home/home_components/home_components.dart';
+import 'package:church/screens/home/home_components/video_container.dart';
 import 'package:flutter/material.dart';
 import 'home_components/data/html_data.dart';
 
@@ -31,11 +34,40 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           Column(
             children: [
-              Text(
-                'LIVES',
-                style: titulo,
+              HeaderContainer(
+                containerChild: ListView(
+                  shrinkWrap: true,
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    Logo(),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        VideoContainer(
+                          videoChild: HomeComponents(
+                            videoLink: videosFaceStream.getVideo(),
+                          ),
+                        ),
+                        VideoContainer(
+                          videoChild: HomeComponents(
+                            videoLink: videosFaceStream.getVideo(),
+                          ),
+                        ),
+                        VideoContainer(
+                          videoChild: HomeComponents(
+                            videoLink: videosFaceStream.getVideo(),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
-              HomeComponents(
+              /* HomeComponents(
                 videoLink: videosFaceStream.getVideo(),
               ),
               HomeComponents(
@@ -43,7 +75,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               HomeComponents(
                 videoLink: videosFaceStream.getVideo(),
-              ),
+              ), */
             ],
           )
         ],

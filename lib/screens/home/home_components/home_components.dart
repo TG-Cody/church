@@ -8,37 +8,9 @@ class HomeComponents extends StatelessWidget {
   const HomeComponents({Key key, this.videoLink}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: MediaQuery.of(context).size.height * .27,
-      width: MediaQuery.of(context).size.width,
-      margin: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
-      color: secondaryColor,
-      child: HtmlWidget(
-        videoLink,
-        webView: true,
-      ),
-      /*  Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          HtmlWidget(
-            videoLink,
-            webView: true,
-          ),
-          /* Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              children: [
-                SocialButton(
-                  // socialIcon: Icons.share,
-                  socialColors: Colors.white,
-
-                  /// socialTap: () {},
-                )
-              ],
-            ),
-          ) */
-        ],
-      ), */
+    return HtmlWidget(
+      videoLink,
+      webView: true,
     );
   }
 }

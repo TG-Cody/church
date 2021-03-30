@@ -7,7 +7,7 @@ class BgComp extends StatelessWidget {
       child: Image.asset(
         "images/fundo.jpg",
         fit: BoxFit.cover,
-        height: 700,
+        height: MediaQuery.of(context).size.height,
       ),
       decoration: BoxDecoration(
         gradient: LinearGradient(
