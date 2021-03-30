@@ -51,7 +51,7 @@ class _CarouselVideoState extends State<CarouselVideo> {
                     bottomLeft: Radius.circular(20),
                   ),
                   //  border: Border.all(color: Colors.white),
-                  color: colors[index],
+                  color: colors[index].withOpacity(0.0),
                 ),
                 child: Padding(
                   padding: const EdgeInsets.only(left: 8, right: 8),

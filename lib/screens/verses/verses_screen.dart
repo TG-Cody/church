@@ -42,7 +42,7 @@ class _VerseScreenState extends State<VerseScreen> {
     final imageFile = await _screenshotController.capture();
     Share.shareFiles(
       [imageFile.path],
-      text: "Compartilhado por TG CODE",
+      text: "Compartilhado por 2ª I.E.Q Barretos-SP",
     );
   }
 
