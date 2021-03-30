@@ -1,9 +1,7 @@
 import 'package:church/screens/home/home.dart';
-import 'package:church/screens/home/home_components/home_components.dart';
+import 'package:church/screens/home/home_components/header/home_components.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
-import 'package:flutter_page_indicator/flutter_page_indicator.dart';
-import 'package:transformer_page_view/transformer_page_view.dart';
 
 import 'package:flutter/cupertino.dart';
 

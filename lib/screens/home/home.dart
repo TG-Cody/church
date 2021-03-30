@@ -1,9 +1,6 @@
 import 'package:church/css/logo.dart';
-import 'package:church/screens/home/home_components/carousel.dart';
-import 'package:church/screens/home/home_components/header_container.dart';
-import 'package:church/screens/home/home_components/home_components.dart';
-import 'package:church/screens/home/home_components/video_carousel.dart';
-import 'package:church/screens/home/home_components/video_container.dart';
+import 'package:church/screens/home/home_components/header/carousel.dart';
+import 'package:church/screens/home/home_components/header/header_container.dart';
 import 'package:flutter/material.dart';
 import 'home_components/data/html_data.dart';
 

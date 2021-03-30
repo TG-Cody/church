@@ -1,5 +1,5 @@
 import 'package:church/screens/home/home.dart';
-import 'package:church/screens/home/home_components/home_components.dart';
+import 'package:church/screens/home/home_components/header/home_components.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_carousel_slider/carousel_slider.dart';
 import 'package:flutter_carousel_slider/carousel_slider_indicators.dart';
@@ -37,7 +37,7 @@ class _CarouselVideoState extends State<CarouselVideo> {
       children: <Widget>[
         Container(
           height: 300,
-          margin: EdgeInsets.symmetric(horizontal: 16),
+          margin: EdgeInsets.symmetric(horizontal: 16, vertical: 32),
           child: CarouselSlider.builder(
             unlimitedMode: true,
             controller: _sliderController,

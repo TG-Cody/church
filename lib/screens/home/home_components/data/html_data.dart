@@ -1,4 +1,4 @@
-import 'package:church/screens/home/home_components/data/videos.dart';
+import 'package:church/screens/home/home_components/header/videos.dart';
 
 class VideosFaceStream {
   int _videoNumber = 0;
