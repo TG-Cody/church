@@ -8,9 +8,16 @@ class HomeComponents extends StatelessWidget {
   const HomeComponents({Key key, this.videoLink}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return HtmlWidget(
-      videoLink,
-      webView: true,
+    return ClipRRect(
+      borderRadius: BorderRadius.only(
+        topLeft: Radius.circular(20),
+        topRight: Radius.circular(20),
+        bottomLeft: Radius.circular(20),
+      ),
+      child: HtmlWidget(
+        videoLink,
+        webView: true,
+      ),
     );
   }
 }
