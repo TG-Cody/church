@@ -1,6 +1,9 @@
+import 'package:church/css/css.dart';
 import 'package:church/css/logo.dart';
 import 'package:church/screens/home/home_components/header/carousel.dart';
 import 'package:church/screens/home/home_components/header/header_container.dart';
+import 'package:church/screens/home/home_components/home_body/campanhas.dart';
+import 'package:church/screens/home/home_components/home_body/titulos.dart';
 import 'package:flutter/material.dart';
 import 'home_components/data/html_data.dart';
 
@@ -17,17 +20,12 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: PreferredSize(
         child: AppBar(
-          title: Text('IGREJA QUADRANGULAR'),
+          title: Text(
+            'IGREJA \nQUADRANGULAR',
+            textAlign: TextAlign.center,
+          ),
           centerTitle: true,
           leading: Logo(),
-          actions: [
-            IconButton(
-              icon: Icon(
-                Icons.add_to_queue_rounded,
-              ),
-              onPressed: () {},
-            )
-          ],
         ),
         preferredSize: Size.fromHeight(80.0),
       ),
@@ -40,41 +38,33 @@ class _HomeScreenState extends State<HomeScreen> {
             mainAxisSize: MainAxisSize.min,
             children: [
               HeaderContainer(
-                containerChild: CarouselVideo(),
-                /* ListView(
-                  shrinkWrap: true,
-                  scrollDirection: Axis.horizontal,
+                containerChild: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Logo(),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            VideoContainer(
-                              videoChild: HomeComponents(
-                                videoLink: videosFaceStream.getVideo(),
-                              ),
-                            ),
-                            VideoContainer(
-                              videoChild: HomeComponents(
-                                videoLink: videosFaceStream.getVideo(),
-                              ),
-                            ),
-                            VideoContainer(
-                              videoChild: HomeComponents(
-                                videoLink: videosFaceStream.getVideo(),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
+                    Expanded(
+                      flex: 4,
+                      child: CarouselVideo(),
                     ),
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.only(right: 16),
+                        child: IconButton(
+                          icon: Icon(
+                            Icons.add_to_queue_rounded,
+                            color: colorIconsMenu,
+                            size: 35,
+                          ),
+                          onPressed: () {},
+                        ),
+                      ),
+                    )
                   ],
-                ), */
+                ),
               ),
+              TitulosBody(
+                title: 'CAMPANHAS',
+              ),
+              Campanhas(),
               /* HomeComponents(
                 videoLink: videosFaceStream.getVideo(),
               ),
