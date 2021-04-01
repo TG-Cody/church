@@ -25,6 +25,8 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
   custom_bottom_navigation_bar: ^0.0.1
+  flutter_carousel_slider: ^1.0.8
+  flutter_swiper: ^1.1.6
   flutter_widget_from_html: ^0.5.2
   intl: ^0.17.0
   multilevel_drawer: ^1.0.3
@@ -32,12 +34,12 @@ dependencies:
   screenshot: ^0.2.0
   share: ^0.6.5+4
   table_calendar: ^2.3.3
-  flutter_swiper: ^1.1.6
-  flutter_carousel_slider: ^1.0.8
+  device_preview: ^0.5.5
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
