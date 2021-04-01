@@ -36,8 +36,10 @@ class _CarouselVideoState extends State<CarouselVideo> {
     return ListView(
       children: <Widget>[
         Container(
-          height: 300,
-          margin: EdgeInsets.symmetric(horizontal: 16, vertical: 32),
+          height: 290,
+          margin: EdgeInsets.symmetric(
+            horizontal: 16,
+          ),
           child: CarouselSlider.builder(
             unlimitedMode: true,
             controller: _sliderController,
@@ -53,11 +55,8 @@ class _CarouselVideoState extends State<CarouselVideo> {
                   //  border: Border.all(color: Colors.white),
                   color: colors[index].withOpacity(0.0),
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 8, right: 8),
-                  child: HomeComponents(
-                    videoLink: videosFaceStream.getVideo(),
-                  ),
+                child: HomeComponents(
+                  videoLink: videosFaceStream.getVideo(),
                 ),
               );
             },
