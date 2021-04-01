@@ -1,6 +1,8 @@
 // ignore: unused_import
 import 'package:church/css/css.dart';
 import 'package:church/css/logo.dart';
+import 'package:church/screens/login/login_components/senha_signup.dart';
+import 'package:church/screens/login/login_components/social_buttons.dart';
 import 'package:church/screens/login/login_components/bg_comp.dart';
 import 'package:church/screens/login/login_components/button_comp.dart';
 import 'package:church/screens/login/login_components/container_comp.dart';
@@ -26,7 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(40.0),
+                  padding: const EdgeInsets.only(top: 32, bottom: 16),
                   child: Text(
                     "Igreja Do Evangelho Quandrangular",
                     style: TextStyle(
@@ -77,6 +79,36 @@ class _LoginScreenState extends State<LoginScreen> {
                   },
                   color: Color(0xff3369FF),
                   title: "Login",
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                SenhaESignup(
+                  title: 'Esqueceu a Senha?',
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SocialButton(
+                      onTap: () {},
+                      colors: Colors.redAccent,
+                      title: 'G',
+                    ),
+                    SocialButton(
+                      onTap: () {},
+                      colors: Colors.blue,
+                      title: 'F',
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                SenhaESignup(
+                  title: 'Ainda não tem uma conta? \nCadastre-se Agora!',
                 ),
               ],
             ),

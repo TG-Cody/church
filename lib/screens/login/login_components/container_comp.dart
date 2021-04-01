@@ -24,7 +24,7 @@ class ContainerComp extends StatelessWidget {
         ),
       ),
       width: MediaQuery.of(context).size.width * .9,
-      height: MediaQuery.of(context).size.height * .95,
+      height: MediaQuery.of(context).size.height * .97,
       child: loginContainer,
     );
   }

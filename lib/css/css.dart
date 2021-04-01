@@ -55,3 +55,8 @@ final textMenu =
     TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold);
 
 final colorIconsMenu = Color(0xffffffff);
+
+final senhaESignup = TextStyle(
+  color: Colors.white,
+  fontSize: 16,
+);
