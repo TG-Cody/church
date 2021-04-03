@@ -13,8 +13,8 @@ class ButtonComp extends StatelessWidget {
       onTap: onTap,
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 32),
-        height: MediaQuery.of(context).size.height * .08,
-        width: MediaQuery.of(context).size.width * .80,
+        height: MediaQuery.of(context).size.height * .07,
+        width: MediaQuery.of(context).size.width * .5,
         decoration: BoxDecoration(
           color: color,
           borderRadius: BorderRadius.circular(50),

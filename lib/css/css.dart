@@ -60,3 +60,11 @@ final senhaESignup = TextStyle(
   color: Colors.white,
   fontSize: 16,
 );
+
+final ministerioMobile = TextStyle(color: Colors.white, fontSize: 22);
+
+final igrejaMobile = TextStyle(
+  color: Colors.white,
+  fontSize: 24,
+  fontWeight: FontWeight.bold,
+);

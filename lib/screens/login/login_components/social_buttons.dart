@@ -17,13 +17,9 @@ class SocialButton extends StatelessWidget {
       onTap: onTap,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Container(
-          height: MediaQuery.of(context).size.height * .09,
-          width: MediaQuery.of(context).size.width * .16,
-          decoration: BoxDecoration(
-            color: colors,
-            borderRadius: BorderRadius.circular(100),
-          ),
+        child: CircleAvatar(
+          radius: 30,
+          backgroundColor: colors,
           child: Center(
             child: Text(
               title,
