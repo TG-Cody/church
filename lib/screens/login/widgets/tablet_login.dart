@@ -107,12 +107,12 @@ class TabletLogin extends StatelessWidget {
                   children: [
                     SocialButton(
                       onTap: () {},
-                      colors: Colors.redAccent,
+                      colors: Color(0xffFF334B),
                       title: 'G',
                     ),
                     SocialButton(
                       onTap: () {},
-                      colors: Colors.blue,
+                      colors: Color(0xff2B5D95),
                       title: 'F',
                     ),
                   ],

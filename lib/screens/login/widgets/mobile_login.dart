@@ -22,7 +22,7 @@ class MobileLogin extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 32, bottom: 16),
+                  padding: const EdgeInsets.only(top: 35, bottom: 16),
                   child: Text(
                     "Igreja Do Evangelho Quandrangular",
                     style: igrejaMobile,
@@ -96,12 +96,12 @@ class MobileLogin extends StatelessWidget {
                   children: [
                     SocialButton(
                       onTap: () {},
-                      colors: Colors.redAccent,
+                      colors: Color(0xffFF334B),
                       title: 'G',
                     ),
                     SocialButton(
                       onTap: () {},
-                      colors: Colors.blue,
+                      colors: Color(0xff2B5D95),
                       title: 'F',
                     ),
                   ],
