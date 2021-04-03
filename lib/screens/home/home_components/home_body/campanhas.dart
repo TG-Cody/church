@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 
+// ignore: must_be_immutable
 class Campanhas extends StatelessWidget {
-  List<String> mypics = [
-    'images/man.png',
-    'images/ironMan.png',
-    'images/wp5173506.jpg',
-  ];
-
   var pictures = [
     'images/T8mIrYO.png',
     'images/man.png',
