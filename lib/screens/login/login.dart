@@ -1,5 +1,6 @@
 // ignore: unused_import
 import 'package:church/breakpoints/breakpoints.dart';
+import 'package:church/screens/login/widgets/bigger_tablet_login.dart';
 
 import 'package:church/screens/login/widgets/mobile_login.dart';
 import 'package:church/screens/login/widgets/tablet_login.dart';
@@ -18,9 +19,13 @@ class _LoginScreenState extends State<LoginScreen> {
     return LayoutBuilder(
       builder: (context, constraints) {
         final maxWidth = constraints.maxWidth;
-        if (maxWidth >= tabletBreakPoint) {
+        if (maxWidth >= biggertabletBreakPoint) {
           return WebLogin();
         }
+        if (maxWidth >= tabletBreakPoint) {
+          return BiggerTabletLogin();
+        }
+
         if (maxWidth >= mobileBreakPoint) {
           return TabletLogin();
         }

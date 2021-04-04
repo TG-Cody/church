@@ -16,8 +16,8 @@ class Campanhas extends StatelessWidget {
       margin: EdgeInsets.only(
         bottom: 16,
       ),
-      height: MediaQuery.of(context).size.height * .3,
-      width: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.height * .4,
+      width: MediaQuery.of(context).size.width * .7,
       color: Colors.white,
       child: Swiper(
         itemBuilder: (BuildContext context, int index) {

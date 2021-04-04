@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
 class VerseComponent extends StatelessWidget {
@@ -16,8 +17,8 @@ class VerseComponent extends StatelessWidget {
           horizontal: 32,
           vertical: 32,
         ),
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height * .5,
+        width: MediaQuery.of(context).size.width * .7,
         decoration: BoxDecoration(
           color: colour,
           borderRadius: BorderRadius.circular(30),
@@ -25,8 +26,9 @@ class VerseComponent extends StatelessWidget {
         child: Center(
           child: Padding(
             padding: const EdgeInsets.all(16.0),
-            child: Text(
+            child: AutoSizeText(
               title,
+              minFontSize: 16,
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 26,
