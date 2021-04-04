@@ -10,31 +10,33 @@ class VerseComponent extends StatelessWidget {
       : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        margin: EdgeInsets.symmetric(
-          horizontal: 32,
-          vertical: 32,
-        ),
-        height: MediaQuery.of(context).size.height * .5,
-        width: MediaQuery.of(context).size.width * .7,
-        decoration: BoxDecoration(
-          color: colour,
-          borderRadius: BorderRadius.circular(30),
-        ),
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: AutoSizeText(
-              title,
-              minFontSize: 16,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 26,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-                height: 1.5,
+    return Center(
+      child: GestureDetector(
+        onTap: onTap,
+        child: Container(
+          margin: EdgeInsets.symmetric(
+            horizontal: 32,
+            vertical: 32,
+          ),
+          height: MediaQuery.of(context).size.height * .5,
+          width: MediaQuery.of(context).size.width * .7,
+          decoration: BoxDecoration(
+            color: colour,
+            borderRadius: BorderRadius.circular(30),
+          ),
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: AutoSizeText(
+                title,
+                minFontSize: 16,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 36,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  height: 1.5,
+                ),
               ),
             ),
           ),

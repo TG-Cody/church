@@ -63,16 +63,12 @@ class _VerseScreenState extends State<VerseScreen> {
         ),
         body: Screenshot(
           controller: _screenshotController,
-          child: Center(
-            child: Flexible(
-              child: VerseComponent(
-                onTap: () {
-                  gerarVersiculo();
-                },
-                title: verseButton,
-                colour: _color,
-              ),
-            ),
+          child: VerseComponent(
+            onTap: () {
+              gerarVersiculo();
+            },
+            title: verseButton,
+            colour: _color,
           ),
         ));
   }
