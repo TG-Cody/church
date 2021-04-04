@@ -65,6 +65,6 @@ final ministerioMobile = TextStyle(color: Colors.white, fontSize: 22);
 
 final igrejaMobile = TextStyle(
   color: Colors.white,
-  fontSize: 24,
+  fontSize: 20,
   fontWeight: FontWeight.bold,
 );

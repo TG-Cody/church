@@ -5,12 +5,13 @@ import 'package:church/common/login_signup_components/login_signup_components.da
 import 'package:church/common/login_signup_components/senha_signup.dart';
 import 'package:church/common/login_signup_components/social_buttons.dart';
 import 'package:church/common/logo.dart';
+import 'package:church/css/css.dart';
+import 'package:church/screens/login/login.dart';
 
 import 'package:church/screens/navigation/navigation_screen.dart';
-import 'package:church/screens/signup/signup.dart';
 import 'package:flutter/material.dart';
 
-class TabletLogin extends StatelessWidget {
+class MobileSignup extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,49 +24,38 @@ class TabletLogin extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 32, bottom: 16),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 16, vertical: 16),
-                    child: Center(
-                      child: Text(
-                        "Igreja Do Evangelho Quandrangular",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
+                  padding: const EdgeInsets.only(top: 25, bottom: 16),
+                  child: Text(
+                    "Igreja Do Evangelho Quandrangular",
+                    style: igrejaMobile,
+                    textAlign: TextAlign.center,
                   ),
                 ),
-                Align(
-                  alignment: Alignment.center,
-                  child: Row(
-                    children: [
-                      Logo(),
-                      Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 20, top: 30),
-                            child: Text(
-                              "Ministério",
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 35),
-                            ),
+                Row(
+                  children: [
+                    Logo(),
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 20, top: 25),
+                          child: Text(
+                            "Ministério",
+                            style: ministerioMobile,
                           ),
-                          Text(
-                            "Pr Francisco & Pra Wilma",
-                            style: TextStyle(color: Colors.white, fontSize: 22),
+                        ),
+                        Text(
+                          "Pr Francisco & Pra Wilma",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
                           ),
-                        ],
-                      )
-                    ],
-                  ),
+                        ),
+                      ],
+                    )
+                  ],
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 15,
                 ),
                 LoginSignupComponents(
                   label: 'Usuario',
@@ -74,7 +64,7 @@ class TabletLogin extends StatelessWidget {
                   obscure: false,
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
                 LoginSignupComponents(
                   label: 'Senha',
@@ -83,7 +73,16 @@ class TabletLogin extends StatelessWidget {
                   obscure: true,
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 10,
+                ),
+                LoginSignupComponents(
+                  label: 'Senha',
+                  hint: 'Confirmar senha',
+                  prefix: Icons.lock,
+                  obscure: true,
+                ),
+                SizedBox(
+                  height: 15,
                 ),
                 ButtonComp(
                   onTap: () {
@@ -95,10 +94,10 @@ class TabletLogin extends StatelessWidget {
                     );
                   },
                   color: Color(0xff3369FF),
-                  title: "Login",
+                  title: "Signup",
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 15,
                 ),
                 SenhaESignup(
                   onPressed: () {},
@@ -130,11 +129,11 @@ class TabletLogin extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => SingnupScreen(),
+                        builder: (context) => LoginScreen(),
                       ),
                     );
                   },
-                  title: 'Ainda não tem uma conta? \nCadastre-se Agora!',
+                  title: 'Já possui uma conta? \nLogar Agora!',
                 ),
               ],
             ),

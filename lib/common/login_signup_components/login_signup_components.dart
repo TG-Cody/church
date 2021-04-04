@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class LoginComponents extends StatelessWidget {
+class LoginSignupComponents extends StatelessWidget {
   final String label;
   final IconData prefix;
   final TextEditingController c;
@@ -8,7 +8,7 @@ class LoginComponents extends StatelessWidget {
   final Function f;
   final bool obscure;
 
-  const LoginComponents(
+  const LoginSignupComponents(
       {Key key,
       this.label,
       this.prefix,

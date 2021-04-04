@@ -5,12 +5,12 @@ import 'package:church/common/login_signup_components/login_signup_components.da
 import 'package:church/common/login_signup_components/senha_signup.dart';
 import 'package:church/common/login_signup_components/social_buttons.dart';
 import 'package:church/common/logo.dart';
+import 'package:church/screens/login/login.dart';
 
 import 'package:church/screens/navigation/navigation_screen.dart';
-import 'package:church/screens/signup/signup.dart';
 import 'package:flutter/material.dart';
 
-class TabletLogin extends StatelessWidget {
+class BiggerTabletSignup extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,7 +65,7 @@ class TabletLogin extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 15,
                 ),
                 LoginSignupComponents(
                   label: 'Usuario',
@@ -74,7 +74,7 @@ class TabletLogin extends StatelessWidget {
                   obscure: false,
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
                 LoginSignupComponents(
                   label: 'Senha',
@@ -83,7 +83,16 @@ class TabletLogin extends StatelessWidget {
                   obscure: true,
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 10,
+                ),
+                LoginSignupComponents(
+                  label: 'Senha',
+                  hint: 'Confirmar senha',
+                  prefix: Icons.lock,
+                  obscure: true,
+                ),
+                SizedBox(
+                  height: 15,
                 ),
                 ButtonComp(
                   onTap: () {
@@ -95,7 +104,7 @@ class TabletLogin extends StatelessWidget {
                     );
                   },
                   color: Color(0xff3369FF),
-                  title: "Login",
+                  title: "Signup",
                 ),
                 SizedBox(
                   height: 20,
@@ -130,11 +139,11 @@ class TabletLogin extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => SingnupScreen(),
+                        builder: (context) => LoginScreen(),
                       ),
                     );
                   },
-                  title: 'Ainda não tem uma conta? \nCadastre-se Agora!',
+                  title: 'Já possui uma conta? \nLogar Agora!',
                 ),
               ],
             ),

@@ -1,11 +1,13 @@
-import 'package:church/css/logo.dart';
-import 'package:church/screens/login/login_components/bg_comp.dart';
-import 'package:church/screens/login/login_components/button_comp.dart';
-import 'package:church/screens/login/login_components/container_comp.dart';
-import 'package:church/screens/login/login_components/login_components.dart';
-import 'package:church/screens/login/login_components/senha_signup.dart';
-import 'package:church/screens/login/login_components/social_buttons.dart';
+import 'package:church/common/login_signup_components/bg_comp.dart';
+import 'package:church/common/login_signup_components/button_comp.dart';
+import 'package:church/common/login_signup_components/container_comp.dart';
+import 'package:church/common/login_signup_components/login_signup_components.dart';
+import 'package:church/common/login_signup_components/senha_signup.dart';
+import 'package:church/common/login_signup_components/social_buttons.dart';
+import 'package:church/common/logo.dart';
+
 import 'package:church/screens/navigation/navigation_screen.dart';
+import 'package:church/screens/signup/signup.dart';
 import 'package:flutter/material.dart';
 
 class BiggerTabletLogin extends StatelessWidget {
@@ -65,7 +67,7 @@ class BiggerTabletLogin extends StatelessWidget {
                 SizedBox(
                   height: 30,
                 ),
-                LoginComponents(
+                LoginSignupComponents(
                   label: 'Usuario',
                   hint: 'Digite seu email',
                   prefix: Icons.person,
@@ -74,7 +76,7 @@ class BiggerTabletLogin extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
-                LoginComponents(
+                LoginSignupComponents(
                   label: 'Senha',
                   hint: 'Digite sua senha',
                   prefix: Icons.lock,
@@ -86,9 +88,11 @@ class BiggerTabletLogin extends StatelessWidget {
                 ButtonComp(
                   onTap: () {
                     Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => NavigationScreen()));
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => NavigationScreen(),
+                      ),
+                    );
                   },
                   color: Color(0xff3369FF),
                   title: "Login",
@@ -97,6 +101,7 @@ class BiggerTabletLogin extends StatelessWidget {
                   height: 20,
                 ),
                 SenhaESignup(
+                  onPressed: () {},
                   title: 'Esqueceu a Senha?',
                 ),
                 SizedBox(
@@ -121,6 +126,14 @@ class BiggerTabletLogin extends StatelessWidget {
                   height: 10,
                 ),
                 SenhaESignup(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SingnupScreen(),
+                      ),
+                    );
+                  },
                   title: 'Ainda não tem uma conta? \nCadastre-se Agora!',
                 ),
               ],

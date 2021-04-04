@@ -5,12 +5,12 @@ import 'package:church/common/login_signup_components/login_signup_components.da
 import 'package:church/common/login_signup_components/senha_signup.dart';
 import 'package:church/common/login_signup_components/social_buttons.dart';
 import 'package:church/common/logo.dart';
+import 'package:church/screens/login/login.dart';
 
 import 'package:church/screens/navigation/navigation_screen.dart';
-import 'package:church/screens/signup/signup.dart';
 import 'package:flutter/material.dart';
 
-class WebLogin extends StatelessWidget {
+class WebSignup extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,9 +19,10 @@ class WebLogin extends StatelessWidget {
           BgComp(),
           ContainerComp(
             loginContainer: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 32, bottom: 16),
+                  padding: const EdgeInsets.only(top: 16, bottom: 16),
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
                         horizontal: 16, vertical: 16),
@@ -39,16 +40,15 @@ class WebLogin extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 24,
-                  ),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 24, vertical: 32),
                   child: IntrinsicHeight(
                     child: Row(
                       children: [
                         Column(
                           children: [
                             SizedBox(
-                              height: 110,
+                              height: 70,
                             ),
                             Logo(),
                             Padding(
@@ -69,7 +69,7 @@ class WebLogin extends StatelessWidget {
                         Column(
                           children: [
                             SizedBox(
-                              height: 100,
+                              height: 30,
                             ),
                             LoginSignupComponents(
                               label: 'Usuario',
@@ -87,19 +87,27 @@ class WebLogin extends StatelessWidget {
                               obscure: true,
                             ),
                             SizedBox(
+                              height: 20,
+                            ),
+                            LoginSignupComponents(
+                              label: 'Senha',
+                              hint: 'Confirmar senha',
+                              prefix: Icons.lock,
+                              obscure: true,
+                            ),
+                            SizedBox(
                               height: 30,
                             ),
                             ButtonComp(
                               onTap: () {
                                 Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => NavigationScreen(),
-                                  ),
-                                );
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            NavigationScreen()));
                               },
                               color: Color(0xff3369FF),
-                              title: "Login",
+                              title: "Signup",
                             ),
                             SizedBox(
                               height: 20,
@@ -134,12 +142,11 @@ class WebLogin extends StatelessWidget {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => SingnupScreen(),
+                                    builder: (context) => LoginScreen(),
                                   ),
                                 );
                               },
-                              title:
-                                  'Ainda não tem uma conta? \nCadastre-se Agora!',
+                              title: 'Já possui uma conta? \nLogar Agora!',
                             ),
                           ],
                         )

@@ -5,12 +5,12 @@ import 'package:church/common/login_signup_components/login_signup_components.da
 import 'package:church/common/login_signup_components/senha_signup.dart';
 import 'package:church/common/login_signup_components/social_buttons.dart';
 import 'package:church/common/logo.dart';
+import 'package:church/screens/login/login.dart';
 
 import 'package:church/screens/navigation/navigation_screen.dart';
-import 'package:church/screens/signup/signup.dart';
 import 'package:flutter/material.dart';
 
-class TabletLogin extends StatelessWidget {
+class TabletSignup extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -83,19 +83,26 @@ class TabletLogin extends StatelessWidget {
                   obscure: true,
                 ),
                 SizedBox(
+                  height: 20,
+                ),
+                LoginSignupComponents(
+                  label: 'Senha',
+                  hint: 'Confirmar senha',
+                  prefix: Icons.lock,
+                  obscure: true,
+                ),
+                SizedBox(
                   height: 30,
                 ),
                 ButtonComp(
                   onTap: () {
                     Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => NavigationScreen(),
-                      ),
-                    );
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => NavigationScreen()));
                   },
                   color: Color(0xff3369FF),
-                  title: "Login",
+                  title: "Signup",
                 ),
                 SizedBox(
                   height: 20,
@@ -130,11 +137,11 @@ class TabletLogin extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => SingnupScreen(),
+                        builder: (context) => LoginScreen(),
                       ),
                     );
                   },
-                  title: 'Ainda não tem uma conta? \nCadastre-se Agora!',
+                  title: 'Já possui uma conta? \nLogar Agora!',
                 ),
               ],
             ),
