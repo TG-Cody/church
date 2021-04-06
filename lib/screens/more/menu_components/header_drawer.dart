@@ -16,7 +16,7 @@ class HeaderMenu extends StatelessWidget {
     return Container(
       color: secondaryColor,
       child: Padding(
-        padding: const EdgeInsets.only(top: 16),
+        padding: const EdgeInsets.only(top: 35),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
