@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:church/css/css.dart';
 import 'package:flutter/material.dart';
 
@@ -19,18 +20,15 @@ class AgendaComponents extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      margin: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
       width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height * .3,
+      height: MediaQuery.of(context).size.height * .25,
       decoration: BoxDecoration(
         color: secondaryColor,
         border: Border.all(
           color: secondaryColor,
         ),
-        borderRadius: BorderRadius.circular(50
-            /*  topLeft: Radius.circular(50),
-          topRight: Radius.circular(50), */
-            ),
+        borderRadius: BorderRadius.circular(50),
       ),
       child: Stack(
         children: [
@@ -38,9 +36,10 @@ class AgendaComponents extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsets.only(top: 50, left: 15),
-                child: Text(
+                padding: EdgeInsets.only(top: 16, left: 32),
+                child: AutoSizeText(
                   title,
+                  minFontSize: 20,
                   style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
@@ -49,8 +48,12 @@ class AgendaComponents extends StatelessWidget {
                 ),
               ),
               Container(
+                margin: EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 12,
+                ),
                 width: MediaQuery.of(context).size.width,
-                padding: EdgeInsets.only(top: 20, left: 10),
+                padding: EdgeInsets.only(top: 20, left: 16),
                 child: Row(
                   children: [
                     Icon(
@@ -59,12 +62,13 @@ class AgendaComponents extends StatelessWidget {
                       color: iconColor,
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 10),
+                      padding: const EdgeInsets.only(left: 16),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          AutoSizeText(
                             event,
+                            minFontSize: 16,
                             style: TextStyle(
                               fontSize: 22,
                               color: Colors.white,
@@ -74,8 +78,9 @@ class AgendaComponents extends StatelessWidget {
                           SizedBox(
                             height: 10,
                           ),
-                          Text(
+                          AutoSizeText(
                             description,
+                            minFontSize: 16,
                             style: TextStyle(
                               fontSize: 18,
                               color: Colors.white,
@@ -83,7 +88,7 @@ class AgendaComponents extends StatelessWidget {
                           ),
                         ],
                       ),
-                    )
+                    ),
                   ],
                 ),
               )

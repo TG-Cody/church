@@ -11,41 +11,63 @@ class _MyDrawerState extends State<MyDrawer> {
   Widget build(BuildContext context) {
     return Container(
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          MenuComponents(
-            tapMenu: () {},
-            iconMenu: Icons.person,
-            titleMenu: 'Perfil',
+          Expanded(
+            child: MenuComponents(
+              tapMenu: () {},
+              iconMenu: Icons.person,
+              titleMenu: 'Perfil',
+            ),
           ),
           Divider(),
-          MenuComponents(
-            tapMenu: () {},
-            iconMenu: Icons.monetization_on,
-            titleMenu: 'Doações',
+          Expanded(
+            child: MenuComponents(
+              tapMenu: () {},
+              iconMenu: Icons.monetization_on,
+              titleMenu: 'Doações',
+            ),
           ),
           Divider(),
-          MenuComponents(
-            tapMenu: () {},
-            iconMenu: Icons.group,
-            titleMenu: 'Grupos',
+          Expanded(
+            child: MenuComponents(
+              tapMenu: () {},
+              iconMenu: Icons.group,
+              titleMenu: 'Grupos',
+            ),
           ),
           Divider(),
-          MenuComponents(
-            tapMenu: () {},
-            iconMenu: Icons.blur_circular_outlined,
-            titleMenu: 'Grupo Missões',
+          Expanded(
+            child: MenuComponents(
+              tapMenu: () {},
+              iconMenu: Icons.blur_circular_outlined,
+              titleMenu: 'Grupo Missões',
+            ),
           ),
           Divider(),
-          MenuComponents(
-            tapMenu: () {},
-            iconMenu: Icons.person_pin,
-            titleMenu: 'Pedido de Oração',
+          Expanded(
+            child: MenuComponents(
+              tapMenu: () {},
+              iconMenu: Icons.person_pin,
+              titleMenu: 'Pedido de Oração',
+            ),
           ),
           Divider(),
-          MenuComponents(
-            tapMenu: () {},
-            iconMenu: Icons.source,
-            titleMenu: 'Ação Social',
+          Expanded(
+            child: MenuComponents(
+              tapMenu: () {},
+              iconMenu: Icons.source,
+              titleMenu: 'Ação Social',
+            ),
+          ),
+          Divider(),
+          Expanded(
+            child: MenuComponents(
+              tapMenu: () {},
+              iconMenu: Icons.source,
+              titleMenu: 'Ação Social',
+            ),
           ),
         ],
       ),
