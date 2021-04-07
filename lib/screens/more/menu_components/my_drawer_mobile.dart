@@ -1,13 +1,14 @@
 import 'package:church/screens/more/menu_components/menu_components.dart';
+import 'package:church/screens/more/menu_components/menu_components_mobile.dart';
 
 import 'package:flutter/material.dart';
 
-class MyDrawer extends StatefulWidget {
+class MyDrawerMobile extends StatefulWidget {
   @override
-  _MyDrawerState createState() => _MyDrawerState();
+  _MyDrawerMobileState createState() => _MyDrawerMobileState();
 }
 
-class _MyDrawerState extends State<MyDrawer> {
+class _MyDrawerMobileState extends State<MyDrawerMobile> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,7 +19,7 @@ class _MyDrawerState extends State<MyDrawer> {
           ListView(
             shrinkWrap: true,
             children: [
-              MenuComponents(
+              MenuComponentsMobile(
                 tapMenu: () {},
                 iconMenu: Icons.person,
                 titleMenu: 'Perfil',
@@ -27,7 +28,7 @@ class _MyDrawerState extends State<MyDrawer> {
           ),
           Divider(),
           ExpansionTile(
-            title: MenuComponents(
+            title: MenuComponentsMobile(
               tapMenu: () {},
               iconMenu: Icons.group,
               titleMenu: 'Grupos Missionários',
@@ -39,25 +40,25 @@ class _MyDrawerState extends State<MyDrawer> {
                 titleMenu: 'G.M Criança',
               ),
               Divider(),
-              MenuComponents(
+              MenuComponentsMobile(
                 tapMenu: () {},
                 iconMenu: Icons.blur_circular_outlined,
                 titleMenu: 'G.M Adolescentes',
               ),
               Divider(),
-              MenuComponents(
+              MenuComponentsMobile(
                 tapMenu: () {},
                 iconMenu: Icons.blur_circular_outlined,
                 titleMenu: 'G.M Jovens',
               ),
               Divider(),
-              MenuComponents(
+              MenuComponentsMobile(
                 tapMenu: () {},
                 iconMenu: Icons.blur_circular_outlined,
                 titleMenu: 'G.M Mulheres',
               ),
               Divider(),
-              MenuComponents(
+              MenuComponentsMobile(
                 tapMenu: () {},
                 iconMenu: Icons.blur_circular_outlined,
                 titleMenu: 'G.M Homens',
@@ -65,25 +66,25 @@ class _MyDrawerState extends State<MyDrawer> {
             ],
           ),
           Divider(),
-          MenuComponents(
+          MenuComponentsMobile(
             tapMenu: () {},
             iconMenu: Icons.source,
             titleMenu: 'Grupo Diáconos',
           ),
           Divider(),
-          MenuComponents(
+          MenuComponentsMobile(
             tapMenu: () {},
             iconMenu: Icons.source,
             titleMenu: 'Grupo Louvor',
           ),
           Divider(),
-          MenuComponents(
+          MenuComponentsMobile(
             tapMenu: () {},
             iconMenu: Icons.monetization_on,
             titleMenu: 'Missões',
           ),
           Divider(),
-          MenuComponents(
+          MenuComponentsMobile(
             tapMenu: () {},
             iconMenu: Icons.person_pin,
             titleMenu: 'Promoções',

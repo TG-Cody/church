@@ -51,8 +51,11 @@ final titulo = TextStyle(
   fontWeight: FontWeight.bold,
 );
 
-final textMenu =
-    TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold);
+final textMenu = TextStyle(
+  color: Colors.white,
+  fontSize: 20,
+  fontWeight: FontWeight.bold,
+);
 
 final colorIconsMenu = Color(0xffffffff);
 

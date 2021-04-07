@@ -32,7 +32,12 @@ class _MenuWebState extends State<MenuWeb> {
                 ),
                 Expanded(
                   flex: 3,
-                  child: MyDrawer(),
+                  child: ListView(
+                    shrinkWrap: true,
+                    children: [
+                      MyDrawer(),
+                    ],
+                  ),
                 ),
               ],
             ),

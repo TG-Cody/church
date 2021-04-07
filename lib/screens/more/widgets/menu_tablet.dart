@@ -32,7 +32,12 @@ class _MenuTabletState extends State<MenuTablet> {
                 ),
                 Expanded(
                   flex: 3,
-                  child: MyDrawer(),
+                  child: ListView(
+                    shrinkWrap: true,
+                    children: [
+                      MyDrawer(),
+                    ],
+                  ),
                 ),
               ],
             ),
